@@ -1,0 +1,51 @@
+body .container div{font-family: Helvetica, Arial, sans-serif !important;font-size:14px;}
+.body{height: 850px;}
+.report-header{
+padding-top: 40px;
+font-weight: bolder;
+font-size: 24px;}
+.report-header1{
+    padding-top: 0px;font-weight: bolder;
+    margin-bottom: 0px;
+}
+body{background:#FFF;}
+/*
+.pclass th{
+padding: 0px !important;
+margin: 0px !important;
+min-width: 210px;
+height: 41px;
+    }
+.pclass th img{
+display: inline-block;
+width: 100%;
+margin: 0px;
+padding: 0px;
+height: 100%;
+z-index: 10 !important;
+}
+.pclass th span{
+
+z-index: 999 !important;
+position: absolute;
+
+display: block;
+margin: 0px !important;
+padding: 0px !important;
+}
+*/
+
+.pclass th, .pclass td, .pclass1 th {border-bottom:1px black solid;}
+thead th {
+background: #e6e6e6;
+}
+.stamp{
+    text-align:right;
+}
+.stamp img{padding:25px 25px;}
+hr{width: 100%;margin:5px auto;}
+.head-top{padding-top: 50px;}
+.pclass.f1{ min-height: 220px; }
+.pclass.f1 td{vertical-align:top;}
+.foot img{height:75px;}
+

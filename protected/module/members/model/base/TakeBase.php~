@@ -1,0 +1,128 @@
+<?php
+Doo::loadCore('db/DooModel');
+
+class TakeBase extends DooModel{
+
+    /**
+     * @var int Max length is 11.
+     */
+    public $id;
+
+    /**
+     * @var date
+     */
+    public $add_date;
+
+    /**
+     * @var int Max length is 11.
+     */
+    public $type;
+
+    /**
+     * @var int Max length is 11.
+     */
+    public $from;
+
+    /**
+     * @var varchar Max length is 100.
+     */
+    public $add_value;
+
+    /**
+     * @var varchar Max length is 100.
+     */
+    public $payment_type;
+
+    /**
+     * @var text
+     */
+    public $details;
+
+    /**
+     * @var datetime
+     */
+    public $create_date;
+
+    /**
+     * @var datetime
+     */
+    public $edit_date;
+
+    /**
+     * @var int Max length is 11.
+     */
+    public $create_by;
+
+    /**
+     * @var int Max length is 11.
+     */
+    public $edit_by;
+
+    public $_table = 'take';
+    public $_primarykey = 'id';
+    public $_fields = array('id','add_date','type','from','add_value','payment_type','details','create_date','edit_date','create_by','edit_by');
+
+    public function getVRules() {
+        return array(
+                'id' => array(
+                        array( 'integer' ),
+                        array( 'maxlength', 11 ),
+                        array( 'optional' ),
+                ),
+
+                'add_date' => array(
+                        array( 'date' ),
+                        array( 'optional' ),
+                ),
+
+                'type' => array(
+                        array( 'integer' ),
+                        array( 'maxlength', 11 ),
+                        array( 'optional' ),
+                ),
+
+                'from' => array(
+                        array( 'integer' ),
+                        array( 'maxlength', 11 ),
+                        array( 'optional' ),
+                ),
+
+                'add_value' => array(
+                        array( 'maxlength', 100 ),
+                        array( 'optional' ),
+                ),
+
+                'payment_type' => array(
+                        array( 'maxlength', 100 ),
+                        array( 'optional' ),
+                ),
+
+                'details' => array(
+                        array( 'optional' ),
+                ),
+
+                'create_date' => array(
+                        array( 'datetime' ),
+                        array( 'optional' ),
+                ),
+
+                'edit_date' => array(
+                        array( 'datetime' ),
+                        array( 'optional' ),
+                ),
+
+                'create_by' => array(
+                        array( 'integer' ),
+                        array( 'maxlength', 11 ),
+                        array( 'optional' ),
+                ),
+
+                'edit_by' => array(
+                        array( 'integer' ),
+                        array( 'maxlength', 11 ),
+                        array( 'optional' ),
+                )
+            );
+    }
+
+}

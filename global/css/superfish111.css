@@ -1,0 +1,22 @@
+/*** ESSENTIAL STYLES ***/
+
+.sf-menu li ul { position:absolute; top:-999em; width:391px; height:129px; background:url(../images/menu.jpg); padding:0; margin:0; list-style:none; }
+
+.sf-menu li ul li { width:130px; background:none; }
+
+.sf-menu li:hover { visibility:inherit; }
+
+.sf-menu li { float:left; position:relative; }
+
+.sf-menu a { display:block; position:relative; }
+
+.sf-menu li:hover ul, .sf-menu li.sfHover ul { left:0; top:2em; z-index:99; }
+
+.sf-menu li li a { color:#FFF; }
+
+.sf-menu li:hover, .sf-menu li.sfHover, .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active { background:#0a3e7a; color:#FFF; outline:0; }
+
+.sf-sub-indicator { float:right; position:absolute; display:block; left:3px; width:10px; height:10px; text-indent:-999em; overflow:hidden; 
+background:url('../images/arrows-ffffff.png') no-repeat -10px -100px; }
+
+a > .sf-sub-indicator { background-position: 0 -100px; }

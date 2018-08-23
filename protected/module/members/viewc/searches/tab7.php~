@@ -1,0 +1,26 @@
+<table id="myTable" class="tablesorter"> 
+            <thead> 
+            <tr> 
+               	<th class="last">حذف</th>
+				<th>الإسم </th>
+				<th class="first">الرقم</th>
+            </tr> 
+            </thead> 
+            <tbody> 
+                <?php $x=0; foreach($data['categories'] as $categorie){ ?>
+                <tr class="table-row<?php echo $x%2; ?>">
+                    <td>
+                        <a id="del_<?php echo $categorie->id; ?>"  href="<?php echo $data['formUrl'] ?><?php echo Doo::conf()->membermod; ?>categories/delete/<?php echo $categorie->id; ?>" class="delet">
+                            <img src="<?php  echo $data['rootUrl']; ?>global/img/delete.gif" >
+                        </a>
+                    </td>
+                    <td>
+                        <a  href="<?php echo $data['formUrl'] ?><?php echo Doo::conf()->membermod; ?>categories/edit/<?php echo $categorie->id; ?>" class="link">
+                            <?php echo $categorie->name; ?>
+                        </a>
+                    </td>
+                    <td><?php echo $categorie->id; ?></td>
+                </tr>
+                <?php $x++;} ?>
+            </tbody> 
+            </table>

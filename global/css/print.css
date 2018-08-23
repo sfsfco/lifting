@@ -1,0 +1,13 @@
+ .boxs{border:1px #000 solid;margin-bottom: 10px;font-weight:bold;}
+.center{text-align:center;}
+.head{background:rgb(142, 180, 227);border-bottom: 1px #000 solid;}
+@media all {
+	.page-header,.page-footer	{ display: none; }
+}
+
+@media print {
+	.page-header	{ display: block; page-break-before: always; }
+	.page-footer	{ display: block; page-break-after: always; }
+}
+
+

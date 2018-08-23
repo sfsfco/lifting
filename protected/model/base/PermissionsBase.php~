@@ -1,0 +1,129 @@
+<?php
+Doo::loadCore('db/DooModel');
+
+class PermissionsBase extends DooModel{
+
+    /**
+     * @var int Max length is 11.
+     */
+    public $id;
+
+    /**
+     * @var varchar Max length is 255.
+     */
+    public $action;
+
+    /**
+     * @var varchar Max length is 255.
+     */
+    public $permission_title;
+
+    /**
+     * @var int Max length is 11.
+     */
+    public $allow;
+
+    /**
+     * @var int Max length is 11.
+     */
+    public $group_id;
+
+    /**
+     * @var datetime
+     */
+    public $create_date;
+
+    /**
+     * @var datetime
+     */
+    public $edit_date;
+
+    /**
+     * @var datetime
+     */
+    public $last_edit;
+
+    /**
+     * @var int Max length is 11.
+     */
+    public $create_by;
+
+    /**
+     * @var int Max length is 11.
+     */
+    public $edit_by;
+
+    /**
+     * @var varchar Max length is 255.
+     */
+    public $controller;
+
+    public $_table = 'permissions';
+    public $_primarykey = 'id';
+    public $_fields = array('id','action','permission_title','allow','group_id','create_date','edit_date','last_edit','create_by','edit_by','controller');
+
+    public function getVRules() {
+        return array(
+                'id' => array(
+                        array( 'integer' ),
+                        array( 'maxlength', 11 ),
+                        array( 'optional' ),
+                ),
+
+                'action' => array(
+                        array( 'maxlength', 255 ),
+                        array( 'optional' ),
+                ),
+
+                'permission_title' => array(
+                        array( 'maxlength', 255 ),
+                        array( 'optional' ),
+                ),
+
+                'allow' => array(
+                        array( 'integer' ),
+                        array( 'maxlength', 11 ),
+                        array( 'optional' ),
+                ),
+
+                'group_id' => array(
+                        array( 'integer' ),
+                        array( 'maxlength', 11 ),
+                        array( 'optional' ),
+                ),
+
+                'create_date' => array(
+                        array( 'datetime' ),
+                        array( 'optional' ),
+                ),
+
+                'edit_date' => array(
+                        array( 'datetime' ),
+                        array( 'optional' ),
+                ),
+
+                'last_edit' => array(
+                        array( 'datetime' ),
+                        array( 'optional' ),
+                ),
+
+                'create_by' => array(
+                        array( 'integer' ),
+                        array( 'maxlength', 11 ),
+                        array( 'optional' ),
+                ),
+
+                'edit_by' => array(
+                        array( 'integer' ),
+                        array( 'maxlength', 11 ),
+                        array( 'optional' ),
+                ),
+
+                'controller' => array(
+                        array( 'maxlength', 255 ),
+                        array( 'optional' ),
+                )
+            );
+    }
+
+}
